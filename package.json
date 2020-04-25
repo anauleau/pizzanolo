@@ -3,7 +3,7 @@
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Andreas Nauleau",
   "dependencies": {
     "gatsby": "^2.20.35",
     "gatsby-image": "^2.3.5",
@@ -26,6 +26,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "ship": "gatsby build && aws s3 cp public/ s3://pizzanolo.com/ --recursive",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
